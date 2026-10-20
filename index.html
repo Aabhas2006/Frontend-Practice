@@ -3,28 +3,138 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>   
+    <title>My Portfolio</title>  
+    <style>
+
+      :root {
+        --primary-color: darkblue;
+        --background-color: lightyellow;
+        --card-radius: 8px;
+        --spacing: 20px;
+      }
+
+      h1 {
+        color: var(--primary-color);
+        font-size: 36px;
+        text-align: center;
+        padding: 20px;
+        margin: 30px;
+        border: 2px solid darkblue;
+        
+      }
+
+      .heading {
+        color: green;
+      }
+
+      #main-title {
+        color: red;
+      }
+
+      p {
+        color: green;
+        padding: var(--spacing);
+      }
+
+      body {
+        background-color: var(--background-color);
+        font-family: Arial;
+      }
+
+      h2 {
+        color: purple;
+        padding: var(--spacing);
+      }
+
+      @media (max-width: 600px) {
+        .Intro {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      
+      .Intro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .skills {
+        display: flex;
+        gap: var(--spacing);
+        flex-wrap: wrap;
+      }
+
+      .skills span {
+        background-color: lightblue;
+        padding: 8px 12px;
+        border-radius: var(--card-radius);
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+      }
+
+      .skills span:hover {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        transform: translateY(-4px);
+        box-shadow: 2px 3px 8px grey;
+      }
+
+      .my-button {
+
+        background-color: blue;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: var(--card-radius);
+        cursor: pointer;
+      }
+
+      .my-button:hover {
+        background-color: darkblue;
+      }
+
+      profie-image {
+        position: relative;
+        top: 10px;
+      }
+
+      input {
+        padding: 10px;
+        border: 2px solid violet;
+        border-radius: var(--card-radius);
+        outline: none;
+      }
+
+    </style> 
  </head>
  <body>
-    <h1>Aabhas Sharma</h1>
-    <img src="profile.jpg" alt="A photo of me" width="200">
-    <p title="About me">Hello!</p>
-    <p>I am a Btech CSE-AIML Student.</p>
-    <h2>My Goals</h2>
-    <p>I want to become an <em>AI engineer</em>.</p>
-    <h2>My Skills</h2>
-    <h3>Python</h3>
-    <p>This is a OOP language that is used to create complex programs such 
-        as <b>backend and Ai's</b>.<br>
-        Here is the link of python page.<br>
-        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python
-         Website
-        </a>.</p>
-    <h3>SQL</h3>
-    <p>This is a language which is used to store data.</p>
-    <h3>HTML</h3>
-    <p><i>Hypertext Markup Language</i> or Html is used to create websites.
-    </p>
+    <div class="Intro">
+      <h1 id="main title" class="heading">My Portfolio</h1>
+
+      <img src="profile.jpg" alt="A photo of me."  width="200" class="profile-image"> >
+
+
+
+      <div>
+        <h1>Aabhas Sharma</h1>
+        <p>I am a Btech CSE-AIML Student.</p>
+        <p>I want to become an <em>AI engineer</em>.</p>
+        <p>I am learning frontend development.</p>
+      </div>
+    </div>
+
+    <input type="text" placeholder="Enter your name">
+
+    <div class="skills">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>HTML</span>
+      <span>CSS</span>
+    </div>
+
     <!-- This is an HTML comment -->
      <img src="Images/coding.jpg" alt="A coding life." width="250">
     <h2>My Developer Journey</h2>

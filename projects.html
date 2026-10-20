@@ -2,18 +2,34 @@
 <html>
 <head>
     <title>My projects page</title>
+    <style>
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px grey
+         
+        }
+
+        @media (max-width: 600px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Projects</h1>
-    <p>Hello this is my projects page.<br>
-        Here u can see my projects.
-    </p>
-    <h3>Peaklift</h3>
-    <p>This is a basic workout CLI based project.<br>In which u can save your workouts,
-    view your prs and alot more.</p>
-    <h3>F1 Championship Manager.</h3>
-    <p>This is a simple CLI based F1 Championship Manager that lets u store your favourite
-        F1 drivers.
-    </p>
+    <div class=" Projects">
+        <div class="project-card">Python project</div>
+        <div class="project-card">SQL project</div>
+        <div class="project-card">AI project</div>
+        <div class="project-card">Web project</div>
+    </div>
 </body>
 </html>
